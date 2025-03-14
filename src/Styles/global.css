@@ -1,0 +1,122 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+.app-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+/* Search Bar */
+.search-bar {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #bbb;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-bar:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Tamil Content Section */
+.tamil-container {
+  background-color: #ffffff;
+  padding: 12px;
+  margin: 15px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.tamil-container:hover {
+  transform: scale(1.02);
+}
+
+.tamil-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.tamil-text {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Dictionary List */
+.dictionary-container {
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.word-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  transition: background 0.3s;
+  font-size: 14px;
+  text-align: center;
+}
+
+.word-item:last-child {
+  border-bottom: none;
+}
+
+.word-item:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 10px;
+  }
+
+  .search-bar {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .tamil-title {
+    font-size: 18px;
+  }
+
+  .tamil-text {
+    font-size: 13px;
+  }
+
+  .word-item {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .footer {
+    font-size: 12px;
+  }
+}

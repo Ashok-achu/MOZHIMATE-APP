@@ -1,0 +1,23 @@
+.dictionary-container {
+    margin-top: 20px;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+  
+  .word-card {
+    background-color: #004d40;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .example {
+    font-style: italic;
+    opacity: 0.8;
+  }
+  

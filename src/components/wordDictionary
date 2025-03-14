@@ -1,0 +1,75 @@
+import React, { useState } from "react";
+
+const WordDictionary = () => {
+  const [selectedWord, setSelectedWord] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const dictionary = {
+    umundi: {
+      tamil: "உமுண்டி",
+      english: "A great orator",
+      example: "He is known as an umundi in his community.",
+    },
+    prajna: {
+      tamil: "ப்ரஜ்ஞா",
+      english: "Wisdom or intellect",
+      example: "Prajna is essential for making wise decisions.",
+    },
+    dharma: {
+      tamil: "தர்மா",
+      english: "Moral duty or righteousness",
+      example: "Following dharma leads to a just life.",
+    },
+  };
+
+  const openModal = (word) => {
+    setSelectedWord(dictionary[word]);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  return (
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
+      <h1 className="text-2xl font-bold mb-4">Word Dictionary</h1>
+
+      {/* Word List */}
+      <ul className="bg-white shadow-lg rounded-lg p-6 w-80">
+        {Object.keys(dictionary).map((word) => (
+          <li
+            key={word}
+            className="cursor-pointer text-blue-600 hover:underline mb-2"
+            onClick={() => openModal(word)}
+          >
+            {word}
+          </li>
+        ))}
+      </ul>
+
+      {/* Modal */}
+      {isModalOpen && selectedWord && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white p-6 rounded-lg shadow-lg max-w-sm">
+            <h2 className="text-xl font-bold mb-2">{selectedWord.tamil}</h2>
+            <p className="text-gray-700">
+              <strong>English:</strong> {selectedWord.english}
+            </p>
+            <p className="text-gray-600 italic mt-2">
+              <strong>Example:</strong> {selectedWord.example}
+            </p>
+            <button
+              onClick={closeModal}
+              className="mt-4 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default WordDictionary;

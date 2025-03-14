@@ -1,0 +1,45 @@
+.header {
+  text-align: center;
+  padding: 15px;
+  background-color: #004d40;
+  color: white;
+  font-size: 5vw; /* Responsive font size */
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Highlighted M and K */
+.highlight {
+  background-color: #ffcc00;
+  padding: 4px 7px;
+  border-radius: 5px;
+  color: #004d40; /* Dark text for contrast */
+  font-weight: bold;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .header {
+    font-size: 6vw; /* Adjust font size for tablets */
+    padding: 12px;
+  }
+
+  .highlight {
+    padding: 3px 6px;
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    font-size: 7vw; /* Larger font for smaller screens */
+    padding: 10px;
+  }
+
+  .highlight {
+    padding: 2px 5px;
+    font-size: 1.3em;
+  }
+}

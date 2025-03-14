@@ -1,0 +1,33 @@
+/* Footer Styling */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  border-top: 3px solid #007bff;
+}
+
+.author {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #f8d210;
+}
+
+.developer {
+  font-weight: bold;
+  color: #00d4ff;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .author {
+    font-size: 16px;
+  }
+}
