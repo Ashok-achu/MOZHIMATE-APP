@@ -1,0 +1,7 @@
+{
+  "name": "mozhi",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "custom"
+}

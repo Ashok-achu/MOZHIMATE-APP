@@ -1,0 +1,11 @@
+{
+	"appId": "com.mozhi",
+	"appName": "mozhi",
+	"webDir": "dist",
+	"packageClassList": [
+		"AppPlugin",
+		"HapticsPlugin",
+		"KeyboardPlugin",
+		"StatusBarPlugin"
+	]
+}
